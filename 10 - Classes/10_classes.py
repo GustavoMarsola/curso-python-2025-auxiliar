@@ -35,8 +35,26 @@ class GerenciamentoUsuarios:
         return None
 
 
-class Sistema(GerenciamentoUsuarios):
+class SistemaPedidos(GerenciamentoUsuarios):
     def __init__(self, email: str, senha: str) -> None:
         super().__init__(email, senha)
+        self.pedidos = []
+    
+    def realizar_pedido(self, pedido: dict) -> None:
+        if self.token:
+            self.pedidos.append(pedido)
+        return None
+    
+    def listar_pedidos(self) -> list:
+        if self.token:
+            return self.pedidos
+        return []
+    
+    def excluir_pedido(self, id_pedido: int) -> None:
+        if self.token:
+            for pedido in self.pedidos:
+                if pedido['id'] == id_pedido:
+                    self.pedidos.remove(pedido)
+        return None
     
     
