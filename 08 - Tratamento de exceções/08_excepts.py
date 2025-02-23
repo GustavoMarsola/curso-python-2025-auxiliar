@@ -21,3 +21,22 @@ else:
 finally:
     # Código que é sempre executado
     print("Fim do bloco")
+
+
+# Podemos tratar várias exceções em um mesmo bloco try/except
+try:
+    # Código que pode gerar exceções
+    numero = 10 / 0.0
+    print(numero)
+except ZeroDivisionError as ex:
+    # Tratamento da exceção
+    print(f"Erro: {ex}")
+except TypeError as ex:
+    # Tratamento da exceção
+    print(f"Erro: {ex}")
+else:
+    # Código que é executado se não ocorrer exceções
+    print("Tudo certo!")
+finally:
+    # Código que é sempre executado
+    print("Fim do bloco")
