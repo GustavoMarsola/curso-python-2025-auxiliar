@@ -56,5 +56,4 @@ class SistemaPedidos(GerenciamentoUsuarios):
                 if pedido['id'] == id_pedido:
                     self.pedidos.remove(pedido)
         return None
-    
-    
+

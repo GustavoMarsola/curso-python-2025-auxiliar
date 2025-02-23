@@ -50,3 +50,4 @@ def dividir_valores(**kwargs) -> int|float:
     divisor   = kwargs.get("divisor")
     divisao   = dividendo / divisor
     return divisao
+
